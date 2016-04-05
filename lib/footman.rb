@@ -1,10 +1,8 @@
 # http://classic.battle.net/war3/human/units/footman.shtml
 
-require_relative 'unit.rb'
+require_relative 'unit'
 
 class Footman < Unit
-
-  attr_accessor :health_points, :attack_power
 
   def initialize
     # Need to default the 2 instance variables here
@@ -13,12 +11,6 @@ class Footman < Unit
     @attack_power = 10
   end
 
-  def attack!(enemy)
-    enemy.damage(10)
-  end
 
-  def damage(amount)
-    self.health_points -= amount
-  end
 
 end
