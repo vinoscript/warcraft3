@@ -1,6 +1,8 @@
 # http://classic.battle.net/war3/human/units/footman.shtml
 
-class Footman
+require_relative 'unit.rb'
+
+class Footman < Unit
 
   attr_accessor :health_points, :attack_power
 
