@@ -1,3 +1,5 @@
+require_relative 'footman'
+
 class Barracks
 
   attr_accessor :gold, :food
@@ -10,4 +12,11 @@ class Barracks
   def can_train_footman?
     true
   end
+
+  def train_footman
+    self.gold -= 135
+    self.food -= 2
+    Footman.new
+  end
+
 end
