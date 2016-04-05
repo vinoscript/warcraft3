@@ -7,8 +7,6 @@ class Unit
     @attack_power = ap
   end
 
-  # def health_points
 
-  # end
 
 end
