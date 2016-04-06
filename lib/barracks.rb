@@ -2,11 +2,14 @@ require_relative 'footman'
 
 class Barracks
 
-  attr_accessor :gold, :food
+  attr_accessor :gold, :food, :lumber
+  attr_reader :health_points
 
   def initialize
     @gold = 1000
     @food = 80
+    @lumber = 500
+    @health_points = 500
   end
 
   def can_train_footman?
@@ -35,6 +38,10 @@ class Barracks
     else
       nil
     end
+  end
+
+  def damage(amount)
+    @health_points -= amount
   end
 
 end

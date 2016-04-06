@@ -7,3 +7,16 @@ require_relative 'spec_helper'
 
 # A Barracks starts off with 500 lumber.
 
+describe Barracks do
+  
+  before do
+    @barracks = Barracks.new
+  end
+
+  it "starts off with 500 lumber resources" do
+    expect(@barracks.lumber).to eq(500)
+  end
+
+
+
+end
