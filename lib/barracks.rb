@@ -44,4 +44,19 @@ class Barracks
     @health_points -= amount
   end
 
+  def can_build_seige_engine?
+    true if (gold >= 200 && lumber >= 60 && food >= 3)
+  end
+
+  def build_seige_engine
+    if can_build_seige_engine?
+      self.gold -= 200
+      self.lumber -= 60
+      self.food -= 3
+      SeigeEngine.new
+    else
+      nil
+    end
+  end
+
 end
